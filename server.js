@@ -7,7 +7,7 @@ const { createCanvas } = require('canvas');
 
 async function generateBarcode({ ean, format }) {
   const canvas = createCanvas(500, 1000);
-  await JsBarcode(canvas, ean, { format });
+  await JsBarcode(canvas, ean, { format, margin: 20 });
   return canvas;
 };
 
